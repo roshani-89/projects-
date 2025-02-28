@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfume Store</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    
+    <style type="text/css"> body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    background-color: #16024f;
+}
+
+/* Navigation Bar */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: black;
+    padding: 10px 0;
+    text-align: center;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Sections */
+section {
+    height: 100vh;
+    text-align: center;
+    padding: 50px;
+}
+
+/* Hero Section */
+/*.hero {
+    background: url('perfume-banner.jpg') center/cover no-repeat;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.hero h1 {
+    font-size: 40px;
+}
+.hero button {
+    background: gold;
+    padding: 10px 20px;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+}*/
+/* Hero Section with Slider */
+.hero {
+    position: relative;
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.swiper {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+.swiper-slide img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+/* Products */
+.products {
+    background: #16024f;
+     box-shadow: 0px 05px 10px 5px   black;
+     border-radius: 20%;
+     height: 100%;
+
+}
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+.product {
+    background:#3b2773;
+    padding: 20px;
+    border-radius: 10px;
+/*    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);*/
+    width: 200px;
+    box-shadow: 0px 05px 10px 5px   black;
+
+}
+.product img {
+    width: 200px;
+    height: 200px;
+}
+.product button {
+    background: darkcyan;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Reviews */
+
+
+/* Order */
+.order {
+    background: black;
+    color: white;
+}
+.order form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: auto;
+}
+.order input {
+    padding: 10px;
+    margin: 5px;
+}
+.order button {
+    background: darkcyan;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+.shop-now-btn{
+    background: linear-gradient(45deg,#16024f,black);
+    color: white;
+    font-size: 18px;
+    box-shadow:0px 5px 10px darkblue ;
+    border-radius: 50%;
+    height: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+
+}
+.shop-now-btn:hover{
+    transform: scale(1.1);
+    box-shadow: 0px 8px 15px darkcyan;
+}
+h1{
+    font-size: 50px;
+}
+.st1{
+    color: cyan;
+    font-family: cursive;
+}
+
+
+.container {
+    padding: 50px;
+}
+
+h1 {
+    
+    color: ;
+}
+
+.qualities {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 1000px;
+
+    margin: auto;
+    background-color: #16024f;
+    box-shadow: 0px 05px 10px 5px   black;
+    border-radius: 20%;
+
+}
+
+.quality {
+    width: 400px;
+    padding: 20px;
+    background:#3b2773 ;
+    box-shadow: 0px 05px 10px 5px   black;
+    border-radius: 10%;
+
+}
+
+.image {
+    width: 20%;
+}
+
+.image img {
+    width: 100%;
+    border-radius: 50%;
+}
+bo</style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#quality">quality</a></li>
+            <li><a href="#order">Order</a></li>
+        </ul>
+    </nav>
+
+    <!-- Home Section -->
+
+<section id="home" class="hero">
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="D:\roshani web\per4.jpg" alt="Perfume 1"></div>
+            <div class="swiper-slide"><img src="D:\roshani web\per3.jpg" alt="Perfume 2"></div>
+            <div class="swiper-slide"><img src="D:\roshani web\per2.jpg" alt="Perfume 3"></div>
+        </div>
+        <!-- Pagination and Navigation Buttons -->
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+    
+    <h1>Unleash the Essence of Elegance – <span class="st1">Your Signature Scent Awaits!</span></h1>
+    
+    <button id="shopNow" class="shop-now-btn">Shop Now</button>
+</section>
+
+
+    <!-- Products Section -->
+    <section id="products" class="products">
+        <h2>Our Exclusive Collection</h2>
+        <div class="product-grid">
+            <div class="product">
+                <img src="D:\roshani web\per5.webp" alt="Perfume 1">
+                <h3>Rose Essence</h3>
+                <p>$49.99</p>
+                <button class="buyNow">Buy Now</button>
+            </div>
+            <div class="product">
+                <img src="D:\roshani web\per4.jpg" alt="Perfume 2">
+                <h3>Ocean Breeze</h3>
+                <p>$59.99</p>
+                <button class="buyNow">Buy Now</button>
+            </div>
+            <div class="product">
+                <img src="D:\roshani web\IMG-20250228-WA0004.jpg" alt="Perfume 3">
+                <h3>Vanilla Bliss</h3>
+                <p>$39.99</p>
+                <button class="buyNow">Buy Now</button>
+            </div>
+            <div class="product">
+                <img src="D:\roshani web\per6.webp" alt="Perfume 4">
+                <h3>Lavender Mist</h3>
+                <p>$44.99</p>
+                <button class="buyNow">Buy Now</button>
+            </div>
+            <div class="product">
+                <img src="D:\roshani web\per7.jpeg" alt="Perfume 5">
+                <h3>Floral Fusion</h3>
+                <p>$54.99</p>
+                <button class="buyNow">Buy Now</button>
+            </div>
+            <div class="product">
+                <img src="D:\roshani web\per8.jpeg" alt="Perfume 6">
+                <h3>Woody Musk</h3>
+                <p>$64.99</p>
+                <button class="buyNow">Buy Now</button>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- Reviews Section -->
+    <section id="quality" class="reviews">
+        <div class="container">
+        <h1>Our Distinctive Qualities</h1>
+        <div class="qualities">
+            <div class="quality">
+                <h2>Long-lasting wear</h2>
+                <p>Our perfumes are designed to last throughout the day, so you can feel confident that your scent will stay with you from morning to night.</p>
+            </div>
+            <div class="quality">
+                <h2>Natural ingredients</h2>
+                <p>We use a blend of natural essential oils and plant extracts to create our fragrances, ensuring a pure and authentic scent.</p>
+            </div>
+            <div class="image">
+                <img src="D:\roshani web\per7.jpeg" alt="Perfume Bottle">
+            </div>
+            <div class="quality">
+                <h2>Sustainable packaging</h2>
+                <p>We are committed to sustainability and use environmentally-friendly packaging for our perfumes. Our bottles are made...</p>
+            </div>
+            <div class="quality">
+                <h2>Unique scents</h2>
+                <p>From floral and woody to citrus and spicy, we offer a wide range of scents to suit every preference. Our perfumes are crafted by skilled perfumers.</p>
+            </div>
+        </div>
+    </div>
+
+
+    </section>
+    <br>
+    <br><br>
+    <br><br>
+    <br><br>
+    <br>
+
+    <!-- Order Section -->
+    <section id="order" class="order">
+        <h2>Place Your Order</h2>
+        <form>
+            <label>Name:</label>
+            <input type="text" placeholder="Your Name" required>
+            
+            <label>Email:</label>
+            <input type="email" placeholder="Your Email" required>
+            
+            <label>Address:</label>
+            <input type="text" placeholder="Your Address" required>
+            
+            <button type="submit">Submit Order</button>
+        </form>
+    </section>
+
+    
+</body>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script type="text/javascript">
+    // "Shop Now" button -> Scroll to Products
+document.getElementById('shopNow').addEventListener('click', function() {
+    document.getElementById('products').scrollIntoView({ behavior: 'smooth' });
+});
+
+// "Buy Now" buttons -> Scroll to Order Section
+document.querySelectorAll('.buyNow').forEach(button => {
+    button.addEventListener('click', function() {
+        document.getElementById('order').scrollIntoView({ behavior: 'smooth' });
+    });
+});
+// Initialize Swiper.js for Image Slider
+var swiper = new Swiper(".mySwiper", {
+    loop: true,
+    autoplay: {
+        delay: 3000, // Change slide every 3 seconds
+        disableOnInteraction: false,
+    },
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+});
+
+// "Shop Now" button -> Scroll to Products
+document.getElementById('shopNow').addEventListener('click', function() {
+    document.getElementById('products').scrollIntoView({ behavior: 'smooth' });
+});
+</script>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfume Qualities</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+</body>
+</html>
