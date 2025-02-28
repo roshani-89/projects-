@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roshani Bhaskar - Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <style type="text/css">
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rosybrown;
+}
+
+header {
+    background: #333;
+    color: rosybrown;
+    padding: 10px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+section {
+    padding: 40px;
+    text-align: ;
+}
+
+.project {
+    background: rosybrown;
+    /*margin: 20px;
+    padding: 20px;
+    border-radius: 10px;*/
+}
+.content{
+    margin-top: 6%;
+    max-width: 600px;
+    font-style: italic;
+}
+.content h1{
+    font-size: 70px;
+    color: white;
+    
+}
+.content p{
+    margin: 3px 0 8px;
+    color: black;
+  animation-delay: 0.5s;
+
+
+}
+.content h2{
+    font-size: 60px;
+    color: brown;
+  animation-delay: 0.8;
+}
+
+
+.feature-img{
+    width: 530px;
+    position: absolute;
+    bottom: -100px;
+    right: 5%;
+    height: 500px;
+    border-radius: 100%;
+
+
+}
+.feature-img.animm{
+  animation-delay: 4s;
+
+}
+.animm{
+  opacity: 0;
+  transform: translate(30px);
+  animation: moveup 4s linear forwards;
+}
+@keyframes moveup{
+  100%{
+    opacity: 1;
+    transform: translate(0px);
+  }
+}
+ /* Main Container */
+.card-container {
+    display: flex;
+    justify-content: ;
+    align-items: ;
+    flex-wrap: wrap; 
+    gap: 200px; 
+    
+    
+}
+
+/* Main Card */
+.card {
+    width: 200px;
+    height: 250px;
+    background-color: rosybrown;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0.9, 0.9, 0.9, 0.9);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+/* Card Hover Effect */
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* Hidden Content */
+.hover-content {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: top 0.3s;
+}
+
+
+.card:hover .hover-content {
+    top: 0;
+}
+
+
+.hover-content img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.card-title {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+@media (max-width: 768px) {
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+
+
+
+.skills-container {
+    
+    
+    
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 600px;
+}
+
+
+.skill {
+    margin: 10px 0;
+}
+
+
+.skill-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+
+.progress-bar {
+    width: 100%;
+    background: #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 25px;
+    text-align: right;
+    padding-right: 10px;
+    font-size: 15px;
+/*    line-height: 10px;*/
+    color: white;
+    border-radius: 5px;
+}
+
+
+.java { width: 90%; background: pink; }
+.python { width: 75%; background: pink; }
+.html { width: 85%; background: hotpink; }
+.css { width: 80%; background: hotpink; }
+.swing { width: 70%; background: hotpink; }
+.mysql { width: 65%; background: hotpink; }
+.git{ width: 80%; background: pink; }
+
+.contact-container {
+    background: rosybrown;
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow:  10px 10px 10px 10px rgba(0, 0.4, 0.2, 0.1);
+}
+
+h2, h3 {
+    color: #333;
+}
+
+p {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: rosybrown;
+}
+
+button {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: gray;
+}
+footer{
+    background-color: black;
+    padding: 40px;
+    width: 1180px;
+    position: absolute;
+    right: 80px;
+    left: 0px;
+    font-size: 16px;
+    color: white;
+}
+.container{
+    width: 1140px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+
+}
+.footer{
+    width: 33.3%;
+}
+.h3{
+    font-size: 28px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+.footer-content{
+    width: 190px;
+    margin: auto;
+    padding: 7px;
+
+}
+.footer-content ul{
+    text-align: center;
+}
+.list{
+    padding: 0;
+}
+/*.list li{
+    width: auto;
+    text-align: center;
+    list-style-type: none;
+    padding: 7px;
+    position: absolute;
+}
+*/
+
+
+footer a {
+    margin: 0 10px;
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #f39c12;
+}
+
+
+
+
+    </style>
+
+</head>
+<body>
+
+    <header>
+        <h1>Roshani Bhaskar</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+     <section id="about"  >
+     <div class="content"> <h1 class="animm"> HELLO..<br><h2> I'm  Roshani Bhaskar</h2></h1><h3> I'm full Stack <span >FRONTEND </span>developer </h3>
+    <h2 class="animm">MY phone number!  <br> 8983150718</h2>
+  </div><div>
+    <img src="D:\roshani web\roshani.jpg" class="feature-img animm">
+  </div>
+
+
+    <section id="projects">
+        <h1 style="text-align: center; font-size: 40px;">My Projects</h1>
+        
+    <div class="card-container">
+        
+        <div class="card">
+            <div class="card-title">1st JAVA project<br> this is a number guessing game using java conditional statement</div>
+            <div class="hover-content">
+                <img src="D:\roshani web\card1..jpeg" alt="Hover Image 1">
+            </div>
+        </div>
+
+        
+        <div class="card">
+            <div class="card-title">2nd java SWING project<br>
+            this project are create using java swing GUI . this is a login page</div>
+            <div class="hover-content">
+                <img src="D:\roshani web\card2.jpeg" alt="Hover Image 2">
+            </div>
+        </div>
+
+        
+        <div class="card">
+            <div class="card-title">3rd html css javascript project<br>
+            this is web page </div>
+            <div class="hover-content">
+                <img src="D:\roshani web\card3.png" alt="Hover Image 3">
+            </div>
+        </div>
+    </div>
+</section>
+
+    <section id="skills">
+        <h2 style="text-align: center; font-size:40px;">Technical Skills</h2>
+        
+
+    <div class="skills-container">
+        
+
+        <div class="skill">
+            <div class="skill-title">Java</div>
+            <div class="progress-bar"><div class="progress java">90%</div></div>
+        </div>
+
+        <div class="skill">
+            <div class="skill-title">Python</div>
+            <div class="progress-bar"><div class="progress python">75%</div></div>
+        </div>
+
+        <div class="skill">
+            <div class="skill-title">HTML</div>
+            <div class="progress-bar"><div class="progress html">85%</div></div>
+        </div>
+
+        <div class="skill">
+            <div class="skill-title">CSS</div>
+            <div class="progress-bar"><div class="progress css">80%</div></div>
+        </div>
+
+        <div class="skill">
+            <div class="skill-title">Java Swing</div>
+            <div class="progress-bar"><div class="progress swing">70%</div></div>
+        </div>
+
+        <div class="skill">
+            <div class="skill-title">MySQL</div>
+            <div class="progress-bar"><div class="progress mysql">65%</div></div>
+        </div>
+
+        <div class="skill">
+            <div class="skill-title">Git & GitHub</div>
+            <div class="progress-bar"><div class="progress git">80%</div></div>
+        </div>
+
+    </div>
+
+</section>
+
+    <section id="contact">
+        <h1 style="text-align:center; font-size:40px;">Contact me</h1>
+        
+    <div class="contact-container">
+        <h2>📞 Contact Me</h2>
+        <p>Email: <a href="mailto:roshanibhaskar2607@gmail.com">roshanibhaskar2607@gmail.com</a></p>
+        <p>Phone: <a href="tel:8983150718">8983150718</a></p>
+        <p>Location: Dhaniv Baugh, Ganesh Nagar, Nallasopara East, 401209</p>
+
+        <h3>Send me a message</h3>
+        <form><div class="col">
+            <label for="name" >Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea></div>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+<
+    </section>
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <h3>
+                    Contact us
+                </h3>
+                <p>Email:roshanibhaskar@2027.gail.com</p>
+                <p>Phone number:8983150718</p>
+                <p>Address:Dhaniv baug ,nallasopara(east)</p>
+            </div>
+            <div class="=footer-content">
+                <h3>QUICK links</h3>
+                <ul class="list">
+                    <li><a href="#about">about</a></li>
+                        <li><a href="#projects">projects</a></li>
+                            <li><a href="#skills">skills</a></li>
+                                <li><a href="#contact">contact</a></li>
+
+                </ul>
+        </div>
+        <div class="footer-content">
+            <h3>Follow me</h3>
+           
+    
+    <a href="facebook.com"><i class="fa-brands fa-facebook"></i></a>
+    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+
+        </div>
+        <div class="bottom-bar">
+            <p>&copy;hey</p>
+        </div>
+    </footer>
+
+    
+
+</body><script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", function () {
+    console.log("Portfolio Loaded Successfully!");
+});
+</script>
+
+</html>
